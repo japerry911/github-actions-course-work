@@ -14,4 +14,4 @@ jobs:
           ls -l .github
           ls -l .github/workflows
           ls -l .github/workflows/04-using-actions.yaml
-          ls -l react-app
+          ls -l 04-using-actions.yaml
