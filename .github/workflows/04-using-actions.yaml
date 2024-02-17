@@ -1,0 +1,17 @@
+name: 04 - Using Actions
+on:
+  - workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Printing Folders
+        run: |
+          ls -l
+          ls -l .github
+          ls -l .github/workflows
+          ls -l .github/workflows/04-using-actions.yaml
+          ls -l react-app
