@@ -8,13 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: say-hello
-        run: echo "Hello, World!"
+        run: export a=123
   echo-goodbye:
     runs-on: ubuntu-latest
     steps:
-      - name: failed-step
-        run: |
-          echo "I will fail"
-          exit 0
       - name: say-goodbye
-        run: echo "Goodbye, World!"
+        run: echo "$a"
