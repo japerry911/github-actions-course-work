@@ -3,14 +3,20 @@ on:
   # - push
   - workflow_dispatch
 
+env:
+  b: "321"
+
 jobs:
   echo-hello:
     runs-on: ubuntu-latest
     steps:
       - name: say-hello
         run: export a=123
+      - name: say-goodbye
+        run: echo "$a"
   echo-goodbye:
+    
     runs-on: ubuntu-latest
     steps:
       - name: say-goodbye
-        run: echo "$a"
+        run: echo "$b"
